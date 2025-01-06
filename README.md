@@ -1,39 +1,29 @@
-### **PROBLEM STATEMENT**
+**PROBLEM STATEMENT**  
+There is concern about credit card payment delays at FinanKu, which could harm the business. Therefore, individuals who are likely to experience payment delays should be predicted more quickly to determine appropriate strategies for addressing future conditions.
 
-Kekhawatiran adanya keterlambatan pembayaran kartu kredit pada FinanKu yang akan merugikan bisnis.
-Sehingga orang-orang yang memiliki potensi untuk mengalami keterlambatan bayar bisa diprediksi lebih cepat untuk menentukan strategi yang sesuai dalam menghadapi kondisi di masa mendatang.
+**OBJECTIVE**  
+To develop a model that can predict at least 60% of customers who will experience credit card payment delays [Accuracy & Recall above 60%].
 
-### **OBJECTIVE**
+**AVAILABLE VARIABLES**  
+The dataset contains several available data points:
 
-Membuat sebuah model yang dapat memprediksi setidaknya 60% dari pelanggan yang akan mengalami telat bayar kartu kredit [Accuracy & Recall di atas 60%]
+1. Customer ID: Unique customer identifier  
+2. Branch: Customer's registered branch location  
+3. City: Customer's registered city location  
+4. Age: Customer's age during the observation period  
+5. Avg. Annual Income/Month: Customer's average monthly income  
+6. Balance (Q1-Q4): Customer's end-of-quarter balance  
+7. Num of Products (Q1-Q4): Number of products held by the customer at the end of each quarter  
+8. HasCrCard (Q1-Q4): Credit card ownership status of the customer at the end of each quarter  
+9. Active Member (Q1-Q4): Customer's activity status  
+10. Unpaid Tagging: Customer's default payment status
 
-### **VARIABEL YANG TERSEDIA**
+**EXPERIMENT**  
+**Review Period:**  
+- Customers are reviewed over the past year  
+- Customers are reviewed over the past 6 months  
 
-Dari dataset yang dimiliki terdapat beberapa data yang tersedia:
-
-
----
-
-
-**1. Customer ID:** Unique ID Customer\
-**2. Branch:** Lokasi Cabang Nasabah Terdaftar\
-**3. City:** Lokasi Kota Nasabah Terdaftar\
-**4. Age:** Umur Nasabah Pada Periode Observasi\
-**5. Avg. Annual Income/Month:** Rata-rata penghasilan nasabah dalam satu tahun\
-**6. Balance (Q1-Q4):** Saldo mengendap yang dimiliki nasabah di akhir kuartal\
-**7. Num of Products (Q1-Q4):** Jumlah kepemilikan produk nasabah di akhir kuartal\
-**8. HasCrCard (Q1-Q4):** Status kepemilikan produk kartu kredit nasabah di akhir kuartal\
-**9. Active Member (Q1-Q4):** Status keaktifan nasabah\
-**10. Unpaid Tagging:** Status nasabah gagal bayar
-
-
-# **EXPERIMENT**
-
-Periode Tinjauan:
-1. Nasabah direview selama satu tahun terakhir
-2. Nasabah direview selama 6 bulan terakhir
-
-Penyesuaian Variabel:
-1. Balance dilihat dari rata-rata selama horizon waktu & dilihat perubahan pada akhir tinjauan dan awal tinjauan
-2. Melihat kepemilikan jumlah produk dari rata-rata, maksimum, dan minimum pada periode tinjauan
-3. Status keaktifan nasabah dilihat dalam bentuk bulan
+**Variable Adjustments:**  
+- The balance is averaged over the review period and observed for changes from the beginning to the end of the review period.  
+- The number of products owned is assessed based on the average, maximum, and minimum during the review period.  
+- Customer activity status is assessed in monthly terms.
